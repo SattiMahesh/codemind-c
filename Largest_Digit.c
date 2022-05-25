@@ -1,18 +1,16 @@
 #include<stdio.h>
-
-int main() {
-
-   int num, r, ld = 0;
-   scanf("%d", &num);
-
-   while (num > 0) {
-       r = num % 10;
-       if (ld < r) {
-           ld = r;
+int main()
+{
+    int n,r,sum=0;
+    scanf("%d",&n);
+    while(n>0)
+    {
+       r=n%10;
+       if(r>sum)
+       {
+          sum=r;
        }
-       num = num / 10;
-   }
-   printf("%d", ld);
-
-   return 0;
+       n=n/10;
+    }
+    printf("%d",sum);
 }
